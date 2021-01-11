@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: OpenSans;
+  src: url(/fonts/OpenSans-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: OpenSansBold;
+  src: url(/fonts/OpenSans-Bold.ttf);
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: OpenSansExtraBold;
+  src: url(/fonts/OpenSans-ExtraBold.ttf);
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html, body {
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 6rem;
+}
+
+.workoutTile {
+  display: flex;
+  flex-direction: column;
+  width: calc(.25*100% - (1 - .25)*10px);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 0 0 1rem;
+  box-shadow: 0 1px 2px rgba(46,49,52,.4);
+  overflow: hidden;
+  position: relative;
+}
+
+.workoutTile.active {
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+
+.workoutTile.moveActive {
+  transition: box-shadow 0.3s ease-in;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  cursor: pointer;
+}
+
+.top {
+  position: relative;
+}
+
+.top img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.workoutList {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  color: #fff;
+  font-family: OpenSansBold;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #000C28;
+  opacity: .54;
+  width: 37%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.workoutList h4 {
+  font-size: 24px;
+  font-family: OpenSansExtraBold;
+  margin: 0;
+}
+
+.workoutList span {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.workoutList img{
+  width: 24px
+}
+
+.bot {
+  padding: 0 1rem 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bot h3 {
+  font-size: 16px;
+  font-family: OpenSansBold;
+  margin-bottom: 0.3rem;
+
+}
+
+.bot img:not(.timerIcon):not(.distIcon) {
+  width: 28px;
+  height: 28px;
+}
+
+.bot a {
+  font-size: 14px;
+  font-family: OpenSansBold;
+  text-decoration: none;
+  color: #0069D2;
+  text-transform: uppercase;
+}
+
+.thumb {
+  margin-top: 1rem;
+  margin-left: 0.2rem;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.time-dist {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.time-dist span {
+  font-family: OpenSansBold;
+  font-size: 10px;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.time-dist img {
+  margin-right: 0.3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .workoutTile {
+    width: calc(.33*100% - (1 - .33)*10px);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 730px) {
+  .workoutTile {
+    width: calc(.50*100% - (1 - .50)*10px);
+  }
+ 
+}
+
+@media screen and (max-width: 550px) {
+  .bot h3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .workoutTile {
+    width: 100%;
   }
 }
