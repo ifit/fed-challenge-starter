@@ -1,0 +1,47 @@
+body {
+    font-family: 'Open Sans',
+    sans-serif;
+    color: rgb(57, 58, 60)
+}
+.card-container {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #a09f9f77;
+    margin-bottom: 15px;
+}
+
+.header-img {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    font-weight: bold;
+}
+.card-body-container {
+    padding: 15px;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.title-container img {
+    padding-left: 5px;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+Button {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    color: rgb(45, 147, 243);
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 0;
+}
