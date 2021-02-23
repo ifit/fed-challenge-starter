@@ -16,10 +16,13 @@ import './Card.css'
 
 export default function MediaCard(props) {
 
+    console.log(props.active)
+
     return (
         <Grid item>
 
-            <Card className='card-container'>
+            <Card className={props.active === 'active' ? 'card-container active' : 'card-container'}
+            >
                 <CardImg
                     top width="100%"
                     className='header-img'
@@ -32,12 +35,11 @@ export default function MediaCard(props) {
                         <CardTitle className="card-title">{props.title}</CardTitle>
                         <img src={props.trainer} alt='trainer headshot' />
                     </div>
-                    <CardSubtitle className="subtitle">
-                        <IoMdStopwatch /> {props.time} <TiArrowLoop />{props.distance}
-                    </CardSubtitle>
-                    <Button size="large" color="primary">
-                        View Details
-        </Button>
+                    <div className={props.type === 'class' ? 'subtitle' : 'hide'}>
+                        <IoMdStopwatch /> {props.time} <TiArrowLoop /> {props.distance}
+                    </div>
+                    <Button className={props.active === 'active' ? '' : 'hide'}>
+                        View Details </Button>
                 </CardBody>
             </Card>
         </Grid>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid'
 
 import './App.css';
@@ -35,74 +35,121 @@ import shredAndBurnTrainer from './images/shred-and-burn-trainer.jpg'
 
 
 function App() {
+
+  let [activeCard, setActiveCard] = useState('inactive')
+
+  let handleActive = (cardId) => {
+    setActiveCard(cardId)
+  }
+
   return (
-
-
     <div className='card-deck'>
-      <Grid container spacing={2} direction='row' justify='center' alignItems='center'>
+      {/* <Grid container spacing={2} direction='row' justify='center' alignItems='center'> */}
 
-        <CardTile
-          headerImage={lakeInniscarraThumb}
-          title='Lake Inniscarra, Ireland &mdash; Pyramid'
-          trainer={lakeInniscarraTrainer}
-          time='30:53'
-          distance={6248}
-        />
+        <div onClick={() => handleActive(1)}>
+          <CardTile
+            active={activeCard === 1 ? 'active' : 'inactive'}
+            headerImage={lakeInniscarraThumb}
+            title='Lake Inniscarra, Ireland &mdash; Pyramid'
+            trainer={lakeInniscarraTrainer}
+            time='30:53'
+            distance='6,248'
+            type='class'
+          />
+        </div>
+
+        <div onClick={() => handleActive(2)}>
+          <CardTile
+            ///NEEDs OVERLAY ON IMAGE for 'workouts
+            active={activeCard === 2 ? 'active' : 'inactive'}
+            headerImage={performanceSeriesThumb}
+            title='Performance Series'
+            trainer={performanceSeriesTrainer}
+            type='series'
+          />
+        </div>
 
 
-        <CardTile
-          ///NEEDs OVERLAY ON IMAGE for 'workouts
-          headerImage={performanceSeriesThumb}
-          title='Performance Series'
-          trainer={performanceSeriesTrainer}
-        />
+        <div onClick={() => handleActive(3)}>
+          <CardTile
+            active={activeCard === 3 ? 'active' : 'inactive'}
+            headerImage={slowPullsThumb}
+            title='Slow Pulls and Fast Intervals'
+            trainer={slowPullsTrainer}
+            time='44:13'
+            distance='9,948'
+            type='class'
+          />
+        </div>
 
-        <CardTile
-          headerImage={slowPullsThumb}
-          title='Slow Pulls and Fast Intervals'
-          trainer={slowPullsTrainer}
-          time='44:13'
-          distance={9948}
-        />
+        <div onClick={() => handleActive(4)}>
 
-        <CardTile
-          ///NEEDs OVERLAY ON IMAGE for 'workouts
-          headerImage={minutesTonedThumb}
-          title='20 Minutes to Toned'
-          trainer={minutesTonedTrainer}
-        />
+          <CardTile
+            ///NEEDs OVERLAY ON IMAGE for 'workouts
+            active={activeCard === 4 ? 'active' : 'inactive'}
 
-        <CardTile
-          headerImage={charlesRaceThumb}
-          title='Charles Race, Boston, Massachusetts'
-          trainer={charlesRaceTrainer}
-          time='36:22'
-          distance={8648}
-        />
+            headerImage={minutesTonedThumb}
+            title='20 Minutes to Toned'
+            trainer={minutesTonedTrainer}
+            type='series'
+          />
+        </div>
 
-        <CardTile
-          ///NEEDs OVERLAY ON IMAGE for 'workouts
-          headerImage={fullBodyHiitThumb}
-          title='Full-Body HIIT Series'
-          trainer={fullBodyHiitTrainer}
-        />
+        <div onClick={() => handleActive(5)}>
 
-        <CardTile
-          headerImage={kafueRiverThumb}
-          title='Kafue River, Zambia  &mdash; Power Stroke Pyramid'
-          trainer={kafueRiverTrainer}
-          time='22:22'
-          distance={4660}
-        />
+          <CardTile
+            active={activeCard === 5 ? 'active' : 'inactive'}
 
-        <CardTile
-          ///NEEDs OVERLAY ON IMAGE for 'workouts
-          headerImage={shredAndBurnThumb}
-          title='Shred & Burn Series'
-          trainer={shredAndBurnTrainer}
-        />
+            headerImage={charlesRaceThumb}
+            title='Charles Race, Boston, Massachusetts'
+            trainer={charlesRaceTrainer}
+            time='36:22'
+            distance='8,648'
+            type='class'
+          />
+        </div>
 
-      </Grid>
+        <div onClick={() => handleActive(6)}>
+
+          <CardTile
+            active={activeCard === 6 ? 'active' : 'inactive'}
+
+            ///NEEDs OVERLAY ON IMAGE for 'workouts
+            headerImage={fullBodyHiitThumb}
+            title='Full-Body HIIT Series'
+            trainer={fullBodyHiitTrainer}
+            type='series'
+          />
+        </div>
+
+        <div onClick={() => handleActive(7)}>
+
+          <CardTile
+            active={activeCard === 7 ? 'active' : 'inactive'}
+
+            headerImage={kafueRiverThumb}
+            title='Kafue River, Zambia  &mdash; Power Stroke Pyramid'
+            trainer={kafueRiverTrainer}
+            time='22:22'
+            distance='4,660'
+            type='class'
+          />
+        </div>
+
+        <div onClick={() => handleActive(8)}>
+
+          <CardTile
+            active={activeCard === 8 ? 'active' : 'inactive'}
+
+            ///NEEDs OVERLAY ON IMAGE for 'workouts
+            headerImage={shredAndBurnThumb}
+            title='Shred & Burn Series'
+            trainer={shredAndBurnTrainer}
+            type='series'
+          />
+        </div>
+
+      {/* </Grid> */}
 
     </div>
 

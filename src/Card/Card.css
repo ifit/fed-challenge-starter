@@ -5,9 +5,14 @@ body {
 }
 .card-container {
     width: 300px;
+    height: 320px;
     border-radius: 10px;
-    box-shadow: 1.5px 1.5px 1.5px 1.5px #a09f9f77;
-    margin-bottom: 15px;
+    box-shadow: 4px 3px 4px 4px #a09f9f77;
+    margin-bottom: 30px;
+}
+
+.active {
+    box-shadow: 6px 6px 6px 6px #a09f9f77;
 }
 
 .header-img {
@@ -34,6 +39,7 @@ body {
     font-weight: bold;
     font-size: 11px;
     margin-bottom: 8px;
+    word-spacing: 5px;
 }
 
 Button {
@@ -44,4 +50,8 @@ Button {
     font-size: 15px;
     font-weight: bold;
     padding-left: 0;
+}
+
+.hide {
+    display: none;
 }
