@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
-import Grid from '@material-ui/core/Grid'
-
 import './App.css';
-
 import CardTile from './Card/Card'
 
-
-
-//TO-DO
-//Make reusable card component 
-//import to app 
-//add props for photos, title, times, distance
-//add select functionality so 'View Details' only shows when state is active 
 
 //Header Photos 
 import lakeInniscarraThumb from './images/lake-inniscarra-thumb.jpg'
@@ -44,112 +34,109 @@ function App() {
 
   return (
     <div className='card-deck'>
-      {/* <Grid container spacing={2} direction='row' justify='center' alignItems='center'> */}
+      <div onClick={() => handleActive(1)}>
+        <CardTile
+          active={activeCard === 1 ? 'active' : 'inactive'}
+          headerImage={lakeInniscarraThumb}
+          title='Lake Inniscarra, Ireland &mdash; Pyramid'
+          trainer={lakeInniscarraTrainer}
+          time='30:53'
+          distance='6,248'
+          type='class'
+        />
+      </div>
 
-        <div onClick={() => handleActive(1)}>
-          <CardTile
-            active={activeCard === 1 ? 'active' : 'inactive'}
-            headerImage={lakeInniscarraThumb}
-            title='Lake Inniscarra, Ireland &mdash; Pyramid'
-            trainer={lakeInniscarraTrainer}
-            time='30:53'
-            distance='6,248'
-            type='class'
-          />
-        </div>
+      <div onClick={() => handleActive(2)}>
+        <CardTile
+          active={activeCard === 2 ? 'active' : 'inactive'}
+          headerImage={performanceSeriesThumb}
+          title='Performance Series'
+          trainer={performanceSeriesTrainer}
+          type='series'
+          workouts={9}
 
-        <div onClick={() => handleActive(2)}>
-          <CardTile
-            ///NEEDs OVERLAY ON IMAGE for 'workouts
-            active={activeCard === 2 ? 'active' : 'inactive'}
-            headerImage={performanceSeriesThumb}
-            title='Performance Series'
-            trainer={performanceSeriesTrainer}
-            type='series'
-          />
-        </div>
+        />
+      </div>
 
 
-        <div onClick={() => handleActive(3)}>
-          <CardTile
-            active={activeCard === 3 ? 'active' : 'inactive'}
-            headerImage={slowPullsThumb}
-            title='Slow Pulls and Fast Intervals'
-            trainer={slowPullsTrainer}
-            time='44:13'
-            distance='9,948'
-            type='class'
-          />
-        </div>
+      <div onClick={() => handleActive(3)}>
+        <CardTile
+          active={activeCard === 3 ? 'active' : 'inactive'}
+          headerImage={slowPullsThumb}
+          title='Slow Pulls and Fast Intervals'
+          trainer={slowPullsTrainer}
+          time='44:13'
+          distance='9,948'
+          type='class'
+        />
+      </div>
 
-        <div onClick={() => handleActive(4)}>
+      <div onClick={() => handleActive(4)}>
 
-          <CardTile
-            ///NEEDs OVERLAY ON IMAGE for 'workouts
-            active={activeCard === 4 ? 'active' : 'inactive'}
+        <CardTile
+          active={activeCard === 4 ? 'active' : 'inactive'}
 
-            headerImage={minutesTonedThumb}
-            title='20 Minutes to Toned'
-            trainer={minutesTonedTrainer}
-            type='series'
-          />
-        </div>
+          headerImage={minutesTonedThumb}
+          title='20 Minutes to Toned'
+          trainer={minutesTonedTrainer}
+          type='series'
+          workouts={12}
 
-        <div onClick={() => handleActive(5)}>
+        />
+      </div>
 
-          <CardTile
-            active={activeCard === 5 ? 'active' : 'inactive'}
+      <div onClick={() => handleActive(5)}>
 
-            headerImage={charlesRaceThumb}
-            title='Charles Race, Boston, Massachusetts'
-            trainer={charlesRaceTrainer}
-            time='36:22'
-            distance='8,648'
-            type='class'
-          />
-        </div>
+        <CardTile
+          active={activeCard === 5 ? 'active' : 'inactive'}
 
-        <div onClick={() => handleActive(6)}>
+          headerImage={charlesRaceThumb}
+          title='Charles Race, Boston, Massachusetts'
+          trainer={charlesRaceTrainer}
+          time='36:22'
+          distance='8,648'
+          type='class'
+        />
+      </div>
 
-          <CardTile
-            active={activeCard === 6 ? 'active' : 'inactive'}
+      <div onClick={() => handleActive(6)}>
 
-            ///NEEDs OVERLAY ON IMAGE for 'workouts
-            headerImage={fullBodyHiitThumb}
-            title='Full-Body HIIT Series'
-            trainer={fullBodyHiitTrainer}
-            type='series'
-          />
-        </div>
+        <CardTile
+          active={activeCard === 6 ? 'active' : 'inactive'}
+          headerImage={fullBodyHiitThumb}
+          title='Full-Body HIIT Series'
+          trainer={fullBodyHiitTrainer}
+          type='series'
+          workouts={12}
 
-        <div onClick={() => handleActive(7)}>
+        />
+      </div>
 
-          <CardTile
-            active={activeCard === 7 ? 'active' : 'inactive'}
+      <div onClick={() => handleActive(7)}>
 
-            headerImage={kafueRiverThumb}
-            title='Kafue River, Zambia  &mdash; Power Stroke Pyramid'
-            trainer={kafueRiverTrainer}
-            time='22:22'
-            distance='4,660'
-            type='class'
-          />
-        </div>
+        <CardTile
+          active={activeCard === 7 ? 'active' : 'inactive'}
 
-        <div onClick={() => handleActive(8)}>
+          headerImage={kafueRiverThumb}
+          title='Kafue River, Zambia  &mdash; Power Stroke Pyramid'
+          trainer={kafueRiverTrainer}
+          time='22:22'
+          distance='4,660'
+          type='class'
+        />
+      </div>
 
-          <CardTile
-            active={activeCard === 8 ? 'active' : 'inactive'}
+      <div onClick={() => handleActive(8)}>
 
-            ///NEEDs OVERLAY ON IMAGE for 'workouts
-            headerImage={shredAndBurnThumb}
-            title='Shred & Burn Series'
-            trainer={shredAndBurnTrainer}
-            type='series'
-          />
-        </div>
-
-      {/* </Grid> */}
+        <CardTile
+          active={activeCard === 8 ? 'active' : 'inactive'}
+          headerImage={shredAndBurnThumb}
+          title='Shred & Burn Series'
+          trainer={shredAndBurnTrainer}
+          type='series'
+          workouts={16}
+        />
+      </div>
 
     </div>
 

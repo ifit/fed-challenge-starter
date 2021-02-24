@@ -1,22 +1,21 @@
 import React from 'react';
+
 import Grid from '@material-ui/core/Grid'
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    Card, CardImg, CardBody,
+    CardTitle, Button
 } from 'reactstrap';
 
 //Icons
 import { IoMdStopwatch } from 'react-icons/io';
-
 import { TiArrowLoop } from 'react-icons/ti'
+// import { MdPlaylistPlay } from 'react-icons/md'
 
 //css
 import './Card.css'
 
 
 export default function MediaCard(props) {
-
-    console.log(props.active)
 
     return (
         <Grid item>
@@ -36,13 +35,12 @@ export default function MediaCard(props) {
                         <img src={props.trainer} alt='trainer headshot' />
                     </div>
                     <div className={props.type === 'class' ? 'subtitle' : 'hide'}>
-                        <IoMdStopwatch /> {props.time} <TiArrowLoop /> {props.distance}
+                        <IoMdStopwatch /> {props.time} <TiArrowLoop /> {props.distance} M
                     </div>
                     <Button className={props.active === 'active' ? '' : 'hide'}>
                         View Details </Button>
                 </CardBody>
             </Card>
         </Grid>
-
     );
 }
