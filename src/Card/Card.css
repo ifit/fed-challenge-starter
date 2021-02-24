@@ -7,7 +7,7 @@ body {
     width: 300px;
     height: 320px;
     border-radius: 10px;
-    box-shadow: 4px 3px 4px 4px #a09f9f77;
+    box-shadow: 1px 1px 1px 1px #a09f9f77;
     margin-bottom: 30px;
 }
 
@@ -56,5 +56,38 @@ Button {
     display: none;
 }
 
+.header-img-container {
+    position: relative;
+}
 
+.series-overlay {
+    width: 38%;
+    height: 170px;
+    background-color: rgba(18, 32, 80, 0.425);
+    position: absolute;
+    color:rgba(255, 255, 255, 0.801);
+    right: 0;
+    top: 0;
+    text-align: center;
+}
 
+.series-overlay h3 {
+    margin-top: 40px;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    font-size: 25px;
+}
+
+.series-overlay p {
+    margin-top: 0;
+    padding-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: bold;
+}
+
+.series-icon {
+    font-size: 25px;
+}
