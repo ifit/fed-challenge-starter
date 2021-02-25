@@ -22,7 +22,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build"
   },
-  "homepage": "http://caitleigh.github.io/fed-challenge-starter/public/index.html",
+  "homepage": "http://caitleigh.github.io/fed-challenge-starter",
   "eslintConfig": {
     "extends": "react-app"
   },
