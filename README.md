@@ -1,3 +1,10 @@
+# App is deployed and hosted on GCP Firebase
+### Desctop and mobile friendly
+### Access the site at
+### https://ifit-1b495.web.app/
+
+![Screenshot](iFit-Health.png)
+
 ## What do I do?
 
 This repo includes a very basic initialization of the `create-react-app` framework, along with the challenge instructions.
