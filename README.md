@@ -1,5 +1,5 @@
 # App is deployed and hosted on GCP Firebase
-### Desctop and mobile friendly
+### Desktop and mobile friendly
 ### Access the site at
 ### https://ifit-1b495.web.app/
 
