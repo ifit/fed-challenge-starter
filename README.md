@@ -27,5 +27,3 @@ All required images have been exported for your use and are included at the link
 
 - [Design document and images](https://www.dropbox.com/sh/qszv92itgpf317c/AAAynYQ_ERvkm0e5MaDivyqfa?dl=0)
 - [Open Sans font](https://fonts.google.com/specimen/Open+Sans)
-
-# Create React App Info
