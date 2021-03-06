@@ -6,7 +6,7 @@ export default ({ qty }) => {
     <div className="workouts">
       <div> { qty } </div>
       <div> Workouts </div>
-      <div> <MenuOpenIcon fontSize="large" /> </div>
+      <MenuOpenIcon fontSize="large" /> 
     </div> 
   )
 }

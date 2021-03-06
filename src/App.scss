@@ -28,6 +28,9 @@ body {
       width: 300px;
       height: 300px;
       position: relative;
+      &:hover {
+        cursor: pointer;
+      }
       .card-image {
         position: relative;  
         height: 100%;

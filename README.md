@@ -21,12 +21,7 @@ Here's the ideal workflow:
 - Fork this repository
 - Make it look amazing
 - Push your version up to a public repository
-- Submit the link in your communications with our hiring department
 - (Optional): host your code at a live URL and share that link, as well
-
-## How long do I have?
-
-Although there's no hard time limit, we ask that you shoot to complete the actual coding portion within 2 hours of starting (on your honor).
 
 ## Required Assets
 

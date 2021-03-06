@@ -12,16 +12,17 @@ const Widget = React.memo( (props) => {
   
   return (
     <Card >
+      {/* Image section with details */}
       <div className="card-image">
         <img  src={`/images/${name}-thumb.jpg`} alt="thumb-img" />
         { openWidget }      
       </div>
+      {/* Title and Time Section */}
       <Card.Content>
         <CardHeader title={title} name={name} />
         { !qty && <CardTimeDetails timer={timer} distance={distance}/> }
       </Card.Content>
-      {
-        
+      {        
         // Selects clicked item
         isActive && <Card.Content extra className={isActive && "transition"}>
           VIEW DETAILS

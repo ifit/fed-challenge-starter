@@ -13,23 +13,16 @@ function App() {
     mockFetch().then(res => res).then(data => setData(data))
   }, [])
   
-
-  // onClick that passes the index that is clicked 
-
-  const handleActive = (idx) => {
-    setIndex(idx)
-  }
-
   return (
     <div className="paper-wrapper">
       {
         data && data.map((item, idx) => {
-          const {name} = item
+
           // isActive returns boolean indicating its matching with index that was clicked
           const isActive = index === idx
 
           return (
-            <Paper key={item.id} onClick={()=>handleActive(idx)} elevation={isActive? 10 : 1 } className="paper" >
+            <Paper key={item.id} onClick={()=>setIndex(idx)} elevation={ isActive? 10 : 1 } className="paper" >
               <Widget data={item} isActive={isActive} />
             </Paper>
           )
