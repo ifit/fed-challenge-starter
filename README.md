@@ -1,3 +1,16 @@
+## Rob Goldstein Code
+This is Rob Goldstein's SPA of the workout grid take home test. It uses basic functional React components and hooks.
+The style is all placed in App.css but if I had worked on this longer, would have made the CSS modularized for each component.
+
+## Future Enhancements
+
+- Modularize CSS
+- Unit test components
+- Comment the code
+- Make sure code is A11y
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Challenge Instructions
